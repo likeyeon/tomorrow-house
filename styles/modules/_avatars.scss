@@ -1,6 +1,10 @@
 %avatar-base {
   display: block; // div 이미지가 a 태그와 같은 인라인 요소일 수도 있기 때문에 안전하게 block 속성값을 준다.
   overflow: hidden;
+  background-image: url('./assets/images/img-user-default.png');
+  background-position: cetner center;
+  background-repeat: no-repeat;
+  background-size: contain;
   border-radius: 50%;
 
   img {

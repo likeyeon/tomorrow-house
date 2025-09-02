@@ -7,6 +7,12 @@
     width: $button-size;
     height: $button-size;
     overflow: hidden;
+    background-image: url('./assets/images/img-user-default.png');
+    background-position: cetner center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    border-radius: 50%;
+
     border: 3px solid $white;
     border-radius: 50%;
     transition: border-color 200ms ease-in-out;
