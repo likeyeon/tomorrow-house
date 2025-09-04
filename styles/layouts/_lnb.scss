@@ -1,4 +1,7 @@
 .lnb {
+  $lnb-link-padding: 8px;
+  $grid-margin: $sm-margin + $gutter / 2;
+
   overflow-x: auto;
 
   &::-webkit-scrollbar {
@@ -6,30 +9,31 @@
   }
 
   &-list {
+    width: auto;
+    min-width: 100vw;
     @include inline-flexbox(start);
+    height: 40px;
+    padding: 0 #{$grid-margin - $lnb-link-padding};
+    margin-left: -#{$grid-margin};
     white-space: nowrap;
-    position: relative;
-    left: -8px;
+    border-bottom: 1px solid $border;
   }
 
   &-item {
     &.is-active {
       a {
         color: $blue;
-        border-bottom: 2px solid $blue;
+        border-bottom-color: $blue;
       }
     }
 
     a {
       @include inline-flexbox;
       @include text-style(13, $dark);
-      font-weight: 700;
       height: 40px;
-      padding: 0px 8px;
-    }
-
-    .ic-new {
-      color: red;
+      padding: 0px $lnb-link-padding;
+      font-weight: 700;
+      border-bottom: 2px solid transparent;
     }
   }
 }
