@@ -19,6 +19,11 @@
     height: 20px;
     font-size: 20px;
     color: $secondary;
+
+    &:hover,
+    &:active {
+      opacity: 0.4;
+    }
   }
 
   .checkout-header {
@@ -29,6 +34,16 @@
     position: relative;
     display: inline-block;
 
+    &:hover {
+      select {
+        border-color: $tertiary;
+      }
+
+      i {
+        color: $secondary;
+      }
+    }
+
     select {
       @include text-style(14, $primary);
       line-height: 1;
@@ -38,6 +53,7 @@
       border-radius: 3px;
       border: 1px solid $border;
       background-color: $white;
+      transition: border-color 100ms ease-in-out;
       appearance: none;
     }
 
@@ -47,6 +63,7 @@
       font-size: 20px;
       color: $tertiary;
       pointer-events: none; // i 영역을 클릭 시 select 클릭이 되지 않는 문제를 해결하기 위해 none 적용
+      transition: border-color 100ms ease-in-out;
     }
   }
 
