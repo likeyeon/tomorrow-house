@@ -12,12 +12,8 @@
   }
 }
 
-.section {
-  @include responsive(T) {
-    color: red;
-  }
-
-  @include responsive(D) {
-    color: blue;
+@mixin mobile-only() {
+  @media screen and (max-width: #{$md-breakpoint - 1px}) {
+    @content;
   }
 }
